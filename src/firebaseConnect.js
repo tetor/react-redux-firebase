@@ -38,7 +38,7 @@ export const createFirebaseConnect = (storeKey = 'store') => (
     prevData = null
     store = this.context[storeKey]
 
-    componentWillMount() {
+    componentDidMount() {
       const { firebase, dispatch } = this.store
 
       // Allow function to be passed

@@ -40,7 +40,7 @@ export const createFirestoreConnect = (storeKey = 'store') => (
       return firebase && firebase.firestore && firestore
     }
 
-    componentWillMount() {
+    componentDidMount() {
       const { firestore } = this.store
       if (this.firestoreIsEnabled) {
         // Allow function to be passed
