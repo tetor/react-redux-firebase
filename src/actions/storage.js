@@ -60,7 +60,7 @@ export const uploadFile = (dispatch, firebase, config) => {
       : firebase
           .storage()
           .ref(`${path}/${filename}`)
-          .put(file)
+          .put(file, meta.options)
 
   return uploadPromise()
     .then(uploadTaskSnapshot => {
